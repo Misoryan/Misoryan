@@ -1,5 +1,6 @@
 ### Hi there 👋
 
+[![wakatime](https://wakatime.com/badge/user/de7a6058-d16c-4df5-8cba-4cbae599bca3.svg)](https://wakatime.com/@de7a6058-d16c-4df5-8cba-4cbae599bca3)
 <!--
 **Misoryan/Misoryan** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
