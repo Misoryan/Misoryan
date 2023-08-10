@@ -5,8 +5,6 @@
 
 ![Wakatime Stats](https://wakatime.com/share/@Misoryan/d9c24e95-e4a3-489f-9eec-d64c7fe58bee.svg)
 
-![Wakatime Stats](https://wakatime.com/share/@Misoryan/44ebce98-437f-40b8-bddd-c17ccb90a94e.svg)
-
 <!--
 **Misoryan/Misoryan** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
