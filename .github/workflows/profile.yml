@@ -34,10 +34,7 @@ jobs:
           python3 - <<'PY'
           p = ".tmp-gpsc/dist/index.js"
           s = open(p, encoding="utf-8").read()
-          s = s.replace("            name
-            email
-            createdAt", "            name
-            createdAt")
+          s = s.replace("            name\n            email\n            createdAt", "            name\n            createdAt")
           open(p, "w", encoding="utf-8").write(s)
           PY
 
