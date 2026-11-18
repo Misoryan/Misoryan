@@ -1,0 +1,44 @@
+name: Update Profile Metrics & Snake
+
+on:
+  schedule:
+    - cron: "0 18 * * *"
+  workflow_dispatch:
+
+jobs:
+  update-profile:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate Contribution Snake SVGs
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/snake-light.svg?palette=github-light
+            assets/snake-dark.svg?palette=github-dark
+
+      - name: Commit updated snake SVGs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/snake-light.svg assets/snake-dark.svg
+          git diff --staged --quiet || (git commit -m "chore: update contribution snake" && git push)
+
+      - name: Generate GitHub Profile Summary Cards
+        if: env.SUMMARY_TOKEN != ''
+        env:
+          SUMMARY_TOKEN: ${{ secrets.SUMMARY_GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.SUMMARY_GITHUB_TOKEN }}
+        uses: vn7n24fzkq/github-profile-summary-cards@release
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          BRANCH_NAME: "main"
+          TIME_ZONE: "Asia/Shanghai"
+          EXCLUDE: "C"
+          ANIMATION: "load"
+          AUTO_PUSH: true

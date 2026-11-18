@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 334" width="860" height="334">
+  <defs>
+    <linearGradient id="cg0" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#58a6ff"/>
+      <stop offset="100%" stop-color="#1f6feb" stop-opacity="0.25"/>
+    </linearGradient>
+    <clipPath id="cc0">
+      <rect x="1" y="1" width="420" height="158" rx="14"/>
+    </clipPath><linearGradient id="cg1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a371f7"/>
+      <stop offset="100%" stop-color="#8957e5" stop-opacity="0.25"/>
+    </linearGradient>
+    <clipPath id="cc1">
+      <rect x="439" y="1" width="420" height="158" rx="14"/>
+    </clipPath><linearGradient id="cg2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3fb950"/>
+      <stop offset="100%" stop-color="#2ea043" stop-opacity="0.25"/>
+    </linearGradient>
+    <clipPath id="cc2">
+      <rect x="1" y="175" width="420" height="158" rx="14"/>
+    </clipPath><linearGradient id="cg3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e3b341"/>
+      <stop offset="100%" stop-color="#d29922" stop-opacity="0.25"/>
+    </linearGradient>
+    <clipPath id="cc3">
+      <rect x="439" y="175" width="420" height="158" rx="14"/>
+    </clipPath>
+  </defs>
+  <style>
+    .sans { font-family: 'PingFang SC', 'Microsoft YaHei', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    .mono { font-family: 'JetBrains Mono', 'Cascadia Code', Consolas, monospace; }
+  </style>
+  <g clip-path="url(#cc0)">
+      <rect x="1" y="1" width="420" height="158" rx="14" fill="#161b22"/>
+      <rect x="1" y="1" width="420" height="3.5" fill="url(#cg0)"/>
+      <text x="22" y="39" class="sans" font-size="16" font-weight="700" fill="#f0f6fc">⚡ 分布式游戏服务端与网络协议</text>
+      <text x="22" y="69" class="sans" font-size="13" fill="#8b949e">高并发 JVM 游戏服运行时与反向代理集群基础设施研发</text>
+      <text x="22" y="92" class="sans" font-size="13" fill="#8b949e">负责区块流式下发、多维世界加载、权威移动同步与确定性回放</text>
+      <rect x="22" y="116" width="65" height="23" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="54.5" y="131.5" text-anchor="middle" class="mono" font-size="11.5" font-weight="500" fill="#58a6ff">Nukkit</text>
+    <rect x="95" y="116" width="96" height="23" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="143.0" y="131.5" text-anchor="middle" class="mono" font-size="11.5" font-weight="500" fill="#58a6ff">SynapseAPI</text>
+    <rect x="199" y="116" width="65" height="23" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="231.5" y="131.5" text-anchor="middle" class="mono" font-size="11.5" font-weight="500" fill="#58a6ff">Ghosty</text>
+    <rect x="272" y="116" width="58" height="23" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="301.0" y="131.5" text-anchor="middle" class="mono" font-size="11.5" font-weight="500" fill="#58a6ff">Netty</text>
+    </g>
+    <rect x="1" y="1" width="420" height="158" rx="14" fill="none" stroke="#30363d" stroke-width="1.2"/><g clip-path="url(#cc1)">
+      <rect x="439" y="1" width="420" height="158" rx="14" fill="#161b22"/>
+      <rect x="439" y="1" width="420" height="3.5" fill="url(#cg1)"/>
+      <text x="460" y="39" class="sans" font-size="16" font-weight="700" fill="#f0f6fc">🧩 跨端协议互通与客户端管线</text>
+      <text x="460" y="69" class="sans" font-size="13" fill="#8b949e">打通基岩版、Java 版与中国版 ModSDK 跨平台技术生态</text>
+      <text x="460" y="92" class="sans" font-size="13" fill="#8b949e">构建自定义 UI/HUD 渲染框架、状态同步与资源包内存优化管线</text>
+      <rect x="460" y="116" width="96" height="23" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="508.0" y="131.5" text-anchor="middle" class="mono" font-size="11.5" font-weight="500" fill="#a371f7">ViaBedrock</text>
+    <rect x="564" y="116" width="80" height="23" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="604.0" y="131.5" text-anchor="middle" class="mono" font-size="11.5" font-weight="500" fill="#a371f7">NeoForge</text>
+    <rect x="652" y="116" width="65" height="23" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="684.5" y="131.5" text-anchor="middle" class="mono" font-size="11.5" font-weight="500" fill="#a371f7">ModSDK</text>
+    <rect x="725" y="116" width="88" height="23" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="769.0" y="131.5" text-anchor="middle" class="mono" font-size="11.5" font-weight="500" fill="#a371f7">Custom UI</text>
+    </g>
+    <rect x="439" y="1" width="420" height="158" rx="14" fill="none" stroke="#30363d" stroke-width="1.2"/><g clip-path="url(#cc2)">
+      <rect x="1" y="175" width="420" height="158" rx="14" fill="#161b22"/>
+      <rect x="1" y="175" width="420" height="3.5" fill="url(#cg2)"/>
+      <text x="22" y="213" class="sans" font-size="16" font-weight="700" fill="#f0f6fc">🌐 Web 全栈平台与数据链路</text>
+      <text x="22" y="243" class="sans" font-size="13" fill="#8b949e">基于 TypeScript、React、Node.js 与 Java 构建全栈服务体系</text>
+      <text x="22" y="266" class="sans" font-size="13" fill="#8b949e">支撑统一身份认证、风控治理闭环与异步行为事件统计链路</text>
+      <rect x="22" y="290" width="88" height="23" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="66.0" y="305.5" text-anchor="middle" class="mono" font-size="11.5" font-weight="500" fill="#3fb950">Open-MyEC</text>
+    <rect x="118" y="290" width="58" height="23" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="147.0" y="305.5" text-anchor="middle" class="mono" font-size="11.5" font-weight="500" fill="#3fb950">React</text>
+    <rect x="184" y="290" width="73" height="23" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="220.5" y="305.5" text-anchor="middle" class="mono" font-size="11.5" font-weight="500" fill="#3fb950">Node.js</text>
+    <rect x="265" y="290" width="149" height="23" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="339.5" y="305.5" text-anchor="middle" class="mono" font-size="11.5" font-weight="500" fill="#3fb950">MySQL/Mongo/Redis</text>
+    </g>
+    <rect x="1" y="175" width="420" height="158" rx="14" fill="none" stroke="#30363d" stroke-width="1.2"/><g clip-path="url(#cc3)">
+      <rect x="439" y="175" width="420" height="158" rx="14" fill="#161b22"/>
+      <rect x="439" y="175" width="420" height="3.5" fill="url(#cg3)"/>
+      <text x="460" y="213" class="sans" font-size="16" font-weight="700" fill="#f0f6fc">🤖 研发基础设施与 AI 工程化</text>
+      <text x="460" y="243" class="sans" font-size="13" fill="#8b949e">建设多任务隔离沙盒环境、JVM 运行时热替换与构建工具链</text>
+      <text x="460" y="266" class="sans" font-size="13" fill="#8b949e">落地多端客户端自动化验收流水线、CI/CD 与飞书协作机器人</text>
+      <rect x="460" y="290" width="73" height="23" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="496.5" y="305.5" text-anchor="middle" class="mono" font-size="11.5" font-weight="500" fill="#e3b341">Sandbox</text>
+    <rect x="541" y="290" width="103" height="23" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="592.5" y="305.5" text-anchor="middle" class="mono" font-size="11.5" font-weight="500" fill="#e3b341">JVM HotSwap</text>
+    <rect x="652" y="290" width="103" height="23" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="703.5" y="305.5" text-anchor="middle" class="mono" font-size="11.5" font-weight="500" fill="#e3b341">Auto Verify</text>
+    <rect x="763" y="290" width="88" height="23" rx="6" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    <text x="807.0" y="305.5" text-anchor="middle" class="mono" font-size="11.5" font-weight="500" fill="#e3b341">AI Agents</text>
+    </g>
+    <rect x="439" y="175" width="420" height="158" rx="14" fill="none" stroke="#30363d" stroke-width="1.2"/>
+</svg>
