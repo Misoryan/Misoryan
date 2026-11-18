@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="208" height="28" viewBox="0 0 208 28">
-  <rect x="0.5" y="0.5" width="207" height="27" rx="7" fill="#ffffff" stroke="#d0d7de"/>
-  <path d="M 7 0.5 H 63 V 27.5 H 7 A 6.5 6.5 0 0 1 0.5 21 V 7 A 6.5 6.5 0 0 1 7 0.5 Z" fill="#f6f8fa"/>
-  <line x1="63" y1="0.5" x2="63" y2="27.5" stroke="#d0d7de"/>
-  <text x="31.5" y="18" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="11" font-weight="700" fill="#1a7f37">ENGINE</text>
-  <text x="135.5" y="18" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="11.5" font-weight="600" fill="#1f2328">EaseCation/Nukkit</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="121" height="26" viewBox="0 0 121 26">
+  <rect x="0.5" y="0.5" width="120" height="25" rx="6.5" fill="#ffffff" stroke="#d0d7de"/>
+  <path d="M 6.5 0.5 H 59 V 25.5 H 6.5 A 6 6 0 0 1 0.5 19.5 V 6.5 A 6 6 0 0 1 6.5 0.5 Z" fill="#f6f8fa"/>
+  <line x1="59" y1="0.5" x2="59" y2="25.5" stroke="#d0d7de"/>
+  <text x="29.5" y="17" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="10.5" font-weight="700" fill="#1a7f37">ENGINE</text>
+  <text x="90.0" y="17" text-anchor="middle" font-family="JetBrains Mono, Consolas, monospace" font-size="11.5" font-weight="600" fill="#1f2328">Nukkit</text>
 </svg>

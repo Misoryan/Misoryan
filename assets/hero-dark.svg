@@ -72,7 +72,7 @@
 
     <!-- Left Hero Content -->
     <text x="36" y="88" class="sans" font-size="30" font-weight="700" fill="url(#titleGrad)">Hi, I&apos;m Misoryan</text>
-    <g transform="translate(282, 87)"><text x="0" y="0" class="sans wave" font-size="26">👋</text></g>
+    <g transform="translate(264, 87)"><text x="0" y="0" class="sans wave" font-size="26">👋</text></g>
 
     <text x="36" y="122" class="sans" font-size="15.5" fill="#8b949e">
       服务端架构与全栈工程师 · Building Distributed Systems at
