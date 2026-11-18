@@ -38,7 +38,7 @@ jobs:
           open(p, "w", encoding="utf-8").write(s)
           PY
 
-      - name: Generate Summary Cards (Dark)
+      - name: Generate Summary Cards (Dark & Light)
         uses: ./.tmp-gpsc
         env:
           GITHUB_TOKEN: ${{ secrets.SUMMARY_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
@@ -46,25 +46,15 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
           TIME_ZONE: "Asia/Shanghai"
           EXCLUDE: "C"
-          THEME: "github_dark"
+          THEME: ""
           ANIMATION: "load"
           AUTO_PUSH: false
 
-      - name: Generate Summary Cards (Light)
-        uses: ./.tmp-gpsc
-        env:
-          GITHUB_TOKEN: ${{ secrets.SUMMARY_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
-        with:
-          USERNAME: ${{ github.repository_owner }}
-          TIME_ZONE: "Asia/Shanghai"
-          EXCLUDE: "C"
-          THEME: "github"
-          ANIMATION: "load"
-          AUTO_PUSH: false
-
-      - name: Commit & push updated SVGs
+      - name: Keep github & github_dark themes and push
         run: |
           rm -rf .tmp-gpsc
+          find profile-summary-card-output -mindepth 1 -maxdepth 1 -type d ! -name github_dark ! -name github -exec rm -rf {} +
+          rm -f profile-summary-card-output/README.md
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/snake-light.svg assets/snake-dark.svg profile-summary-card-output/
