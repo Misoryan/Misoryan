@@ -11,7 +11,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Checkout repository
+      - name: Checkout profile repository
         uses: actions/checkout@v4
 
       - name: Generate Contribution Snake SVGs
@@ -22,23 +22,53 @@ jobs:
             assets/snake-light.svg?palette=github-light
             assets/snake-dark.svg?palette=github-dark
 
-      - name: Commit updated snake SVGs
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/snake-light.svg assets/snake-dark.svg
-          git diff --staged --quiet || (git commit -m "chore: update contribution snake" && git push)
+      - name: Checkout summary cards generator
+        uses: actions/checkout@v4
+        with:
+          repository: vn7n24fzkq/github-profile-summary-cards
+          ref: release
+          path: .tmp-gpsc
 
-      - name: Generate GitHub Profile Summary Cards
-        if: env.SUMMARY_TOKEN != ''
+      - name: Adapt GraphQL query for Actions GITHUB_TOKEN
+        run: |
+          python3 - <<'PY'
+          p = ".tmp-gpsc/dist/index.js"
+          s = open(p, encoding="utf-8").read()
+          s = s.replace("            name
+            email
+            createdAt", "            name
+            createdAt")
+          open(p, "w", encoding="utf-8").write(s)
+          PY
+
+      - name: Generate Summary Cards (Dark)
+        uses: ./.tmp-gpsc
         env:
-          SUMMARY_TOKEN: ${{ secrets.SUMMARY_GITHUB_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.SUMMARY_GITHUB_TOKEN }}
-        uses: vn7n24fzkq/github-profile-summary-cards@release
+          GITHUB_TOKEN: ${{ secrets.SUMMARY_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
         with:
           USERNAME: ${{ github.repository_owner }}
-          BRANCH_NAME: "main"
           TIME_ZONE: "Asia/Shanghai"
           EXCLUDE: "C"
+          THEME: "github_dark"
           ANIMATION: "load"
-          AUTO_PUSH: true
+          AUTO_PUSH: false
+
+      - name: Generate Summary Cards (Light)
+        uses: ./.tmp-gpsc
+        env:
+          GITHUB_TOKEN: ${{ secrets.SUMMARY_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+        with:
+          USERNAME: ${{ github.repository_owner }}
+          TIME_ZONE: "Asia/Shanghai"
+          EXCLUDE: "C"
+          THEME: "github"
+          ANIMATION: "load"
+          AUTO_PUSH: false
+
+      - name: Commit & push updated SVGs
+        run: |
+          rm -rf .tmp-gpsc
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/snake-light.svg assets/snake-dark.svg profile-summary-card-output/
+          git diff --staged --quiet || (git commit -m "chore: auto-refresh profile metrics & snake" && git push)
